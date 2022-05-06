@@ -1,0 +1,40 @@
+    Create (DisneyPlus:Plataform{title:'Disney Plus'})
+    Create(DalmatianStreet:Serie{title:'101 Dalmatian Street',Genre:'Animation',Seasons:1,Episodes:53})
+    Create(AndiMack:Serie{title:'Andi Mack',Genre:'Family',Seasons:3,Episodes:57})
+    Create(AustinAlly:Serie{title:'Austin & Ally',Genre:'Comedy',Seasons:4,Episodes:87})
+    Create(GravityFalls:Serie{title:'Gravity Falls',Genre:'Mystery',Seasons:2,Episodes:40})
+    Create(AlexHirsch:Person{name:'Alex Hirsch',function:'Creator'})
+    Create(TobiasConanTrost:Person{name:'Tobias Conan Trost',function:'Producer'}) 
+    Create(KevinKopelow:Person{name:'Kevin Kopelow',function:'Creator'})
+    Create(HeathSeifert:Person{name:'Heath Seifert',function:'Creator'})
+    Create(MiklosWeigert:Person{name:'Miklos Weigert',function:'Creator'})  
+    Create(TerriMinsky:Person{name:'Terri Minsky',function:'Creator'})
+    Create(MichelleManning:Person{name:'Michelle Manning',function:'Producer'})
+	
+
+    Create
+    (DalmatianStreet)-[:Show_de]->(DisneyPlus),
+    (AndiMack)-[:Show_de]->(DisneyPlus),
+    (AustinAlly)-[:Show_de]->(DisneyPlus),
+    (TobiasConanTrost)-[:Productor_de]->(GravityFalls),
+    (AlexHirsch)-[:Creador_de]->(GravityFalls),
+    (HeathSeifert)-[:Creador_de]->(AustinAlly),
+    (KevinKopelow)-[:Creador_de]->(AustinAlly),
+    (HeathSeifert)-[:Productor_de]->(AustinAlly),
+    (KevinKopelow)-[:Productor_de]->(AustinAlly),
+    (MiklosWeigert)-[:Creador_de]->(DalmatianStreet),
+    (MiklosWeigert)-[:Director_de]->(DalmatianStreet),
+    (TerriMinsky)-[:Creador_de]->(AndiMack),
+    (MichelleManning)-[:Productor_de]->(AndiMack), 
+    (TerriMinsky)-[:Productor_de]->(AndiMack), 
+    (GravityFalls)-[:Show_de]->(DisneyPlus) 
+    Create(HannahMontana:Serie{title:'Hannah Montana',Genre:'Family',Seasons:4,Episodes:101})
+    Create(MichaelPoryes:Person{name:'Michael Poryes',function:'Creator'})
+    Create(RichCorrell:Person{name:'Rich Correll',function:'Creator'})
+    Create(BarryOBrien:Person{name:'Barry O´Brien',function:'Creator'})
+    Create
+    (HannahMontana)-[:Show_de]->(DisneyPlus),
+    (MichaelPoryes)-[:Creador_de]->(HannahMontana),
+    (RichCorrell)-[:Creador_de]->(HannahMontana),
+    (BarryOBrien)-[:Creador_de]->(HannahMontana)
+    Return DisneyPlus
