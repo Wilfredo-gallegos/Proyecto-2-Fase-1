@@ -1,0 +1,33 @@
+<header>
+  <h1>Buscador de Series</h1>
+</header>
+<section>
+  <form [formGroup]="searchForm">
+    <label>
+      <input type="text" (keyup)="searchItem.next($event)" formControlName="search" placeholder="Busca series">
+      <select (change)="changeCategory($event)" class="custom-select">
+        <option *ngFor="let category of categories" [ngValue]="category">{{category}}</option>
+      </select>
+      <div *ngIf="loading">
+        <p class="search-message">Buscando</p>
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>
+    </label>
+  </form>
+
+  <div *ngIf="series">
+    <div class="results">
+      <div class="serie" *ngFor="let serie of paginationElements | paginate: {itemsPerPage: 10, currentPage: page}" (click)="goToSeries(serie.serie_title)">
+        <img loading="lazy" [src]="serie.serie_poster" alt="poster">
+        <h2>{{serie.serie_title}}</h2>
+        <p><em>Temporadas: </em>{{serie.serie_seasons}}</p>
+        <p><em>Episodios: </em>{{serie.serie_episodes}}</p>
+      </div>
+    </div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
+    <div *ngIf="errorMessage" class="errorMessage">
+      <h2>Error</h2>
+      <p class="error">{{errorMessage}}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", Verdana, Geneva, Taboma, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.custom-select {
+  border-radius: 10px;
+  display: inline;
+  margin: 50px auto 0 auto;
+  max-width: 600px;
+  -webkit-box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  height: auto;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 400;
+  border: none;
+}
+
+.logo {
+  width: 60%;
+  display: block;
+  margin: 100px auto 0 auto;
+  max-width: 400px;
+}
+
+img {
+  border-radius: 10px;
+  max-width: 85%;
+}
+
+input[type="text"] {
+  border-radius: 10px;
+  padding: 14px;
+  border: none;
+  display: inline;
+  width: 70%;
+  margin: 50px auto 0 auto;
+  max-width: 600px;
+  -webkit-box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+}
+
+.search-message {
+  font-size: 2rem;
+  color: rgb(214, 214, 214);
+  padding-top: 40px;
+  margin: 0;
+}
+
+.results {
+  width: 80%;
+  margin: 120px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.serie {
+  width: 100%;
+  max-width: 400px;
+  padding-top: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  background: rgb(243, 243, 243);
+  -webkit-box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+  box-shadow: 0 10px 21px 0 rgba(214, 214, 214, 1);
+}
+
+.serie h2 {
+  width: 90%;
+  margin: 0 auto;
+  word-break: break-all;
+}
+
+.serie h2 > a {
+  color: rgb(0, 155, 103);
+}
+
+.errorMessage h2 {
+  color: red;
+}
+
+.error {
+  padding: 20px;
+  width: 40%;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 27px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgb(253, 85, 183);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 6px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 6px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 26px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 45px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
